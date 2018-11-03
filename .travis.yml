@@ -11,15 +11,15 @@ script:
 - docker run bear2u/docker-react npm run test -- --coverage
 
 deploy:
-provider: elasticbeanstalk
-region: "ap-northeast-2"
-app: "docker-react2"
-env: "DockerReact2-env"
-bucket_name: "docker-react2-env.pbzin8ceqc.ap-northeast-2"
-bucket_path: "docker-react2"
-on:
-  branch: master
-acess_key_id: $AWS_ACCESS_KEY
-secret_access_key:
-  secure: "$AWS_SECRET_KEY"
-  
+  provider: elasticbeanstalk
+  region: "ap-northeast-2"
+  app: "docker-react2"
+  env: "DockerReact2-env"
+  bucket_name: "docker-react2-env.pbzin8ceqc.ap-northeast-2"
+  bucket_path: "docker-react2"
+  on:
+    branch: master
+  acess_key_id: $AWS_ACCESS_KEY
+  secret_access_key:
+    secure: "$AWS_SECRET_KEY"
+
